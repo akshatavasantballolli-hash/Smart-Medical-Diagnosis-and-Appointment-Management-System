@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Hospital System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- PATIENT FORM -->
+
+<div class="form-container" id="formContainer">
+
+<h1>Patient Registration</h1>
+
+<input type="text"
+id="name"
+placeholder="Enter Name">
+
+<input type="number"
+id="age"
+placeholder="Enter Age">
+
+<select id="gender">
+
+<option value="">Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+
+</select>
+
+<select id="specialist">
+
+<option value="">Select Specialist</option>
+
+<option>Pediatrician</option>
+<option>Gynecologist</option>
+<option>General Physician</option>
+<option>Dermatologist</option>
+<option>Cardiologist</option>
+
+</select>
+
+<button onclick="registerPatient()">
+Continue
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<!-- MAIN SYSTEM -->
+
+<div class="container"
+id="mainContainer"
+style="display:none;">
+
+<h2>Patient Details</h2>
+
+<p>Name: <span id="displayName"></span></p>
+<p>Age: <span id="displayAge"></span></p>
+<p>Gender: <span id="displayGender"></span></p>
+<p>Specialist: <span id="displaySpec"></span></p>
+
+<hr>
+
+<h3>Enter Symptoms</h3>
+
+<input
+type="text"
+id="symptoms"
+placeholder="Example: fever, pcod">
+
+<button onclick="startVoice()">
+🎤 Speak Symptoms
+</button>
+
+<button onclick="checkSymptoms()">
+Check Symptoms
+</button>
+
+<button onclick="downloadPDF()">
+Download Report
+</button>
+
+<div id="result"></div>
+
+<hr>
+
+<h3>Book Appointment</h3>
+
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<button onclick="bookAppointment()">
+Book Appointment
+</button>
+
+<h3>Appointment History</h3>
+
+<table id="appointmentTable">
+
+<tr>
+<th>Date</th>
+<th>Time</th>
+</tr>
+
+</table>
+
+<hr>
+
+<h3>Medicine Reminder</h3>
+
+<input
+type="text"
+id="medicineName"
+placeholder="Medicine Name">
+
+<input
+type="time"
+id="reminderTime">
+
+<button onclick="setReminder()">
+Set Reminder
+</button>
+
+<hr>
+
+<h3>Medical History</h3>
+
+<table id="historyTable">
+
+<tr>
+<th>Disease</th>
+<th>Medicine</th>
+<th>Syrup</th>
+</tr>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+<script src="voice.js"></script>
+<script src="reminder.js"></script>
+
+</body>
+</html>

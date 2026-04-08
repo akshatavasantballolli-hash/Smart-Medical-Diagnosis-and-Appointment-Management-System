@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Patient Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Patient Dashboard</h1>
+
+<p>Name: <span id="displayName"></span></p>
+<p>Age: <span id="displayAge"></span></p>
+<p>Gender: <span id="displayGender"></span></p>
+<p>Specialist: <span id="displaySpec"></span></p>
+
+<hr>
+
+<input
+type="text"
+id="symptoms"
+placeholder="Enter Symptoms">
+
+<button onclick="startVoice()">
+🎤 Speak
+</button>
+
+<button onclick="checkSymptoms()">
+Check Symptoms
+</button>
+
+<button onclick="downloadPDF()">
+Download Report
+</button>
+
+<div id="result"></div>
+
+<hr>
+
+<h3>Medical History</h3>
+
+<table id="historyTable">
+
+<tr>
+<th>Disease</th>
+<th>Medicine</th>
+<th>Syrup</th>
+</tr>
+
+</table>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</div>
+
+<script src="dashboard.js"></script>
+<script src="voice.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- IMPORTANT: Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Admin Login</h1>
+
+<div id="loginSection">
+
+<input
+type="text"
+id="adminUser"
+placeholder="Username">
+
+<input
+type="password"
+id="adminPass"
+placeholder="Password">
+
+<button onclick="adminLogin()">
+Login
+</button>
+
+<p id="loginMessage"></p>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div id="dashboard"
+style="display:none;">
+
+<h2>Admin Dashboard</h2>
+
+<button onclick="logout()">
+Logout
+</button>
+
+<hr>
+
+<h3>Analytics Dashboard</h3>
+
+<!-- Chart Canvas -->
+<canvas id="myChart"
+width="400"
+height="200">
+</canvas>
+
+<hr>
+
+<h3>All Patients</h3>
+
+<table id="patientsTable">
+
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Specialist</th>
+</tr>
+
+</table>
+
+<hr>
+
+<h3>All Reports</h3>
+
+<table id="reportsTable">
+
+<tr>
+<th>Patient</th>
+<th>Disease</th>
+<th>Medicine</th>
+<th>Syrup</th>
+</tr>
+
+</table>
+
+<hr>
+
+<h3>All Appointments</h3>
+
+<table id="appointmentsTable">
+
+<tr>
+<th>Patient</th>
+<th>Date</th>
+<th>Time</th>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
